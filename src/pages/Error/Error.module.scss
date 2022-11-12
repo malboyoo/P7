@@ -1,0 +1,15 @@
+.error {
+  height: 100%;
+  span {
+    font-size: 280px;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 75px;
+    font-size: 36px;
+  }
+  .link {
+    margin-top: 150px;
+    color: var(--primary);
+  }
+}

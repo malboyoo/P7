@@ -1,0 +1,33 @@
+.collapseBox {
+  margin-top: 35px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .textBox {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--light-gray);
+    transition: max-height 0.4s ease-out;
+
+    .pContainer {
+      padding: 30px 20px 15px 20px;
+      p {
+        margin: 0;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .nameContainer {
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: var(--primary);
+    cursor: pointer;
+    h2 {
+      color: white;
+      font-weight: 400;
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+  }
+}

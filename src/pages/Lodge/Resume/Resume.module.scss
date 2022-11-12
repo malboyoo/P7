@@ -1,0 +1,43 @@
+.resumeContainer {
+  margin-top: 25px;
+  justify-content: space-between;
+  .nameTagContainer {
+    h1 {
+      font-weight: 500;
+      font-style: 36px;
+    }
+    .location {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      margin-right: 10px;
+      background-color: var(--primary);
+      font-size: 14px;
+      color: white;
+      border-radius: 10px;
+      padding: 4px 35px;
+    }
+  }
+}
+
+.authorRatingContainer {
+  align-items: flex-end;
+  .namePictureContainer {
+    margin-bottom: 25px;
+    h3 {
+      text-align: right;
+      align-self: center;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.lodging {
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+
+  .imgGradiant {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      z-index: 1;
+      max-width: 200px;
+      position: absolute;
+      text-align: left;
+      bottom: 25px;
+      left: 20px;
+      font-size: 18px;
+      font-weight: 400;
+      color: white;
+    }
+  }
+  .imgGradiant::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+  }
+}

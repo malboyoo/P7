@@ -1,0 +1,39 @@
+.carousel {
+  height: 415px;
+  width: 100%;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .btnNext {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 40px);
+  }
+  .btnPrev {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    left: 20px;
+    top: calc(50% - 40px);
+  }
+  .currentImg {
+    position: absolute;
+    left: calc(50% - 11px);
+    bottom: 30px;
+    font-size: 18px;
+    color: white;
+  }
+}
