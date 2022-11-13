@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Lodging.module.scss";
 
-function Lodging({ id, title, cover, pictures, description, host, rating, location, equipments, tags }) {
+function Lodging({ id, title, cover }) {
   return (
     <Link to={`/lodging/${id}`}>
       <div className={`${styles.lodging} m-25`}>

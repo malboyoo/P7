@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import CollapseMenu from "../../components/CollapseMenu/CollapseMenu";
 import data from "../../datas/logements";
 import Carousel from "./Carousel/Carousel";
@@ -9,7 +9,9 @@ function Lodge() {
   const { id } = useParams();
   const lodgeData = data.find((el) => el.id === id);
 
-  return (
+  return lodgeData === undefined ? (
+    <Navigate to="/" replace={true} />
+  ) : (
     <div className="flex-col">
       <Carousel pictures={lodgeData.pictures} />
       <Resume {...lodgeData} />
