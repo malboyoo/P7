@@ -8,7 +8,9 @@ function Header() {
   return (
     <header className={`${styles.header} flex-row align-items-center`}>
       <div className="logo">
-        <img src={logo} alt="Logo de l'agence Kasa" />
+        <Link to="/">
+          <img src={logo} alt="Logo de l'agence Kasa" />
+        </Link>
       </div>
       <nav className={`${styles.nav} flex-row`}>
         <Link to="/" className={styles.link} style={pathname === "/" ? { textDecoration: "underline" } : null}>

@@ -1,6 +1,11 @@
+@use "./assets/styles/media_queries" as mixin;
+
 .appContainer {
   background: white;
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
+  @include mixin.lg {
+    padding: 0 20px;
+  }
 }

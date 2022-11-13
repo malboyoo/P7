@@ -23,12 +23,16 @@ function Carousel({ pictures }) {
   return (
     <div className={styles.carousel}>
       <img src={pictures[pictureIndex]} alt="" />
-      <button className={styles.btnNext} onClick={handleClickNext}>
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
-      <button className={styles.btnPrev} onClick={handleClickPrevious}>
-        <i className="fa-solid fa-chevron-left"></i>
-      </button>
+      {pictures.length !== 1 && (
+        <button className={styles.btnNext} onClick={handleClickNext}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
+      {pictures.length !== 1 && (
+        <button className={styles.btnPrev} onClick={handleClickPrevious}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
       <span className={styles.currentImg}>{`${pictureIndex + 1}/${pictures.length}`}</span>
     </div>
   );

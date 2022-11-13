@@ -1,16 +1,30 @@
+@use "../../assets/styles/media_queries" as mixin;
+
 .header {
   justify-content: space-between;
   margin: 40px 0;
+  @include mixin.xs {
+    margin: 20px 0;
+  }
   img {
     height: 68px;
+    @include mixin.xs {
+      height: 48px;
+    }
   }
   nav {
     font-size: 24px;
+
     .link {
       color: var(--primary);
       text-decoration: none;
       margin-left: 50px;
       transition: text-shadow 0.4s;
+      @include mixin.xs {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-left: 15px;
+      }
       &:hover {
         // à voir avec paul
         text-shadow: 0 0 1px var(--primary);

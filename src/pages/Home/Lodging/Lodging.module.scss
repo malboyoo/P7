@@ -1,9 +1,29 @@
+@use "../../../assets/styles/media_queries" as mixin;
+
 .lodging {
   width: 340px;
   height: 340px;
   overflow: hidden;
   position: relative;
   border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  @include mixin.lg {
+    margin: 25px 15px;
+  }
+  @include mixin.xs {
+    width: 340px;
+    height: 255px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    img {
+      transition: transform 0.4s;
+      transform: scale(1.02);
+    }
+  }
 
   .imgGradiant {
     width: 100%;
