@@ -3,10 +3,10 @@ import Housing from "./Housing/Housing.js";
 
 function Home() {
   return (
-    <div className="flex-fill">
+    <main className="flex-fill">
       <Banner />
       <Housing />
-    </div>
+    </main>
   );
 }
 

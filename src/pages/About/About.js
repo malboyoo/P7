@@ -5,14 +5,14 @@ import styles from "./About.module.scss";
 
 function About() {
   return (
-    <div className="about">
+    <main className="about">
       <Background />
-      <div className={styles.collapseContainer}>
+      <section className={styles.collapseContainer}>
         {aboutData.map((collapseMenu) => (
           <CollapseMenu {...collapseMenu} key={collapseMenu.id} />
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

@@ -12,7 +12,7 @@ function Lodge() {
   return lodgeData === undefined ? (
     <Navigate to="/error" replace={true} />
   ) : (
-    <div className="flex-col">
+    <main className="flex-col">
       <Carousel pictures={lodgeData.pictures} />
       <Resume {...lodgeData} />
       <div className={`${styles.collapsesContainer}`}>
@@ -35,7 +35,7 @@ function Lodge() {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 
