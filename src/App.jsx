@@ -1,11 +1,11 @@
-import Header from "./components/Header/Header.js";
-import Home from "./pages/Home/Home.js";
-import About from "./pages/About/About.js";
+import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 import { Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer/Footer.js";
+import Footer from "./components/Footer/Footer";
 import styles from "./App.module.scss";
-import Error from "./pages/Error/Error.js";
-import Lodge from "./pages/Lodge/Lodge.js";
+import Error from "./pages/Error/Error";
+import Lodge from "./pages/Lodge/Lodge";
 
 function App() {
   return (

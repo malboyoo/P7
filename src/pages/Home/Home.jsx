@@ -1,5 +1,5 @@
-import Banner from "./Banner/Banner.js";
-import Housing from "./Housing/Housing.js";
+import Banner from "./Banner/Banner";
+import Housing from "./Housing/Housing";
 
 function Home() {
   return (

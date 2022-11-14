@@ -8,7 +8,7 @@ function CollapseMenu({ name, text, fromLodge = false }) {
   return (
     <div
       className={`${styles.collapseBox} flex-fill`}
-      style={fromLodge ? { maxWidth: 580 + "px", fontSize: 18 + "px" } : null}
+      style={fromLodge ? { maxWidth: "580px", fontSize: "18px" } : null}
     >
       <div
         className={`${styles.nameContainer} flex-row align-items-center`}
