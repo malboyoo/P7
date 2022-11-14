@@ -1,33 +1,40 @@
+@use "../../../assets/styles/media_queries" as mixin;
+
 .carousel {
   height: 415px;
   width: 100%;
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  @include mixin.xs {
+    height: 255px;
+  }
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    @include mixin.xs {
+      object-fit: cover;
+    }
+  }
+  .btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    top: calc(50% - 40px);
+    @include mixin.xs {
+      font-size: 30px;
+      top: calc(50% - 15px);
+    }
   }
   .btnNext {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-size: 80px;
-    position: absolute;
     right: 20px;
-    top: calc(50% - 40px);
   }
   .btnPrev {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: white;
-    font-size: 80px;
-    position: absolute;
     left: 20px;
-    top: calc(50% - 40px);
   }
   .currentImg {
     position: absolute;

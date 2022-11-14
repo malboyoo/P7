@@ -1,12 +1,15 @@
+@use "../../../assets/styles/media_queries" as mixin;
+
 .background {
   width: 100%;
   height: 225px;
   overflow: hidden;
   position: relative;
   border-radius: 25px;
-  img {
-    width: 100%;
-    height: 100%;
-    filter: brightness(70%);
+  background-image: url("../../../assets/images/About_background_desktop.jpg");
+  background-size: cover;
+  filter: brightness(70%);
+  @include mixin.xs {
+    background-image: url("../../../assets/images/About_background_mobile.jpg");
   }
 }

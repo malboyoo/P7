@@ -17,6 +17,11 @@
     height: 100%;
     filter: brightness(70%);
   }
+  // @include mixin.xs {
+  //   h1::before {
+  //     content: "Chez vous, partout et ailleurs";
+  //   }
+  // }
   h1 {
     width: 100%;
     position: absolute;
@@ -27,14 +32,13 @@
     font-weight: 400;
     color: white;
     @include mixin.sm {
-      width: 75%;
-      text-align: start;
-      margin: 0 20px;
+      text-align: center;
+      white-space: pre-wrap;
+      padding: 0 20px;
       font-size: 36px;
       top: calc(50% - 44px);
     }
     @include mixin.xs {
-      width: 63%;
       font-size: 24px;
       top: calc(50% - 29px);
     }

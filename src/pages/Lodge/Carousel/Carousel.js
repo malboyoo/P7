@@ -24,12 +24,12 @@ function Carousel({ pictures }) {
     <div className={styles.carousel}>
       <img src={pictures[pictureIndex]} alt="" />
       {pictures.length !== 1 && (
-        <button className={styles.btnNext} onClick={handleClickNext}>
+        <button className={`${styles.btnNext} ${styles.btn}`} onClick={handleClickNext}>
           <i className="fa-solid fa-chevron-right"></i>
         </button>
       )}
       {pictures.length !== 1 && (
-        <button className={styles.btnPrev} onClick={handleClickPrevious}>
+        <button className={`${styles.btnPrev} ${styles.btn}`} onClick={handleClickPrevious}>
           <i className="fa-solid fa-chevron-left"></i>
         </button>
       )}

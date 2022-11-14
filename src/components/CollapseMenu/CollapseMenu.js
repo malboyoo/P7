@@ -6,7 +6,10 @@ function CollapseMenu({ name, text, fromLodge = false }) {
   const contentRef = useRef();
 
   return (
-    <div className={`${styles.collapseBox}`} style={fromLodge ? { width: 580 + "px", fontSize: 18 + "px" } : null}>
+    <div
+      className={`${styles.collapseBox} flex-fill`}
+      style={fromLodge ? { maxWidth: 580 + "px", fontSize: 18 + "px" } : null}
+    >
       <div
         className={`${styles.nameContainer} flex-row align-items-center`}
         onClick={() => {

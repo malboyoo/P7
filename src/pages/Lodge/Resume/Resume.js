@@ -19,7 +19,7 @@ function Resume({ title, host, rating, location, tags }) {
       <div className={`${styles.nameTagContainer} flex-col`}>
         <h1>{title}</h1>
         <p className={styles.location}>{location}</p>
-        <div className="flex-row">
+        <div className="flex-row wrap">
           {tags.map((tag) => (
             <span className={styles.tag} key={tag}>
               {tag}

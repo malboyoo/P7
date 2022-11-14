@@ -1,3 +1,5 @@
+@use "../../assets/styles/media_queries" as mixin;
+
 .collapseBox {
   margin-top: 35px;
   border-radius: 5px;
@@ -14,6 +16,12 @@
       p {
         margin: 0;
         font-size: 24px;
+        @include mixin.sm {
+          font-size: 14px;
+        }
+        @include mixin.xs {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -28,6 +36,12 @@
       font-weight: 400;
       padding: 10px 20px;
       font-size: 24px;
+      @include mixin.sm {
+        font-size: 16px;
+      }
+      @include mixin.xs {
+        font-size: 14px;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "./media_queries" as mixin;
+
 .fa-chevron-down,
 .fa-chevron-up {
   color: white;
@@ -7,5 +9,9 @@
 
 .star {
   margin-left: 10px;
-  font-size: 28px;
+  width: 30px;
+  @include mixin.sm {
+    width: 15px;
+    margin-left: 5px;
+  }
 }

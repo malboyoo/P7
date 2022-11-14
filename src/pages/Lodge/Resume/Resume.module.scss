@@ -1,15 +1,27 @@
+@use "../../../assets/styles/media_queries" as mixin;
+
 .resumeContainer {
   margin-top: 25px;
   justify-content: space-between;
+  @include mixin.sm {
+    flex-direction: column;
+    margin-top: 15px;
+  }
   .nameTagContainer {
     h1 {
       font-weight: 500;
       font-style: 36px;
+      @include mixin.sm {
+        font-size: 18px;
+      }
     }
     .location {
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 20px;
+      @include mixin.sm {
+        font-size: 14px;
+      }
     }
 
     .tag {
@@ -19,25 +31,46 @@
       color: white;
       border-radius: 10px;
       padding: 4px 35px;
+      @include mixin.sm {
+        font-size: 11px;
+        padding: 3px 15px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
 
 .authorRatingContainer {
   align-items: flex-end;
+  @include mixin.sm {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+  }
   .namePictureContainer {
     margin-bottom: 25px;
+    @include mixin.sm {
+      margin-bottom: 0;
+    }
     h3 {
       text-align: right;
       align-self: center;
       font-weight: 400;
       margin-right: 10px;
+      @include mixin.sm {
+        font-size: 14px;
+      }
     }
     img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
       object-fit: cover;
+      @include mixin.sm {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }
