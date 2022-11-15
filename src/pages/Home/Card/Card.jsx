@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import styles from "./Lodging.module.scss";
+import styles from "./Card.module.scss";
 
-function Lodging({ id, title, cover }) {
+function Card({ id, title, cover }) {
   return (
-    <Link to={`/lodging/${id}`}>
-      <article className={`${styles.lodging} m-25`}>
+    <Link to={`/lodge/${id}`}>
+      <article className={`${styles.card} m-25`}>
         <div className={styles.imgGradiant}>
           <h2>{title}</h2>
           <img src={cover} alt="Representation du logement" />
@@ -14,4 +14,4 @@ function Lodging({ id, title, cover }) {
   );
 }
 
-export default Lodging;
+export default Card;
