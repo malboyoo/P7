@@ -4,9 +4,11 @@
   color: white;
   background-color: black;
   min-width: 100%;
+
   img {
     height: 40px;
     margin: 60px 0 40px 0;
+
     @include mixin.xs {
       margin-bottom: 20px;
     }

@@ -6,9 +6,11 @@
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+
   @include mixin.xs {
     height: 255px;
   }
+
   img {
     height: 100%;
     width: 100%;
@@ -17,6 +19,7 @@
       object-fit: cover;
     }
   }
+
   .btn {
     cursor: pointer;
     border: none;
@@ -25,17 +28,21 @@
     font-size: 80px;
     position: absolute;
     top: calc(50% - 40px);
+
     @include mixin.xs {
       font-size: 30px;
       top: calc(50% - 15px);
     }
   }
+
   .btnNext {
     right: 20px;
   }
+
   .btnPrev {
     left: 20px;
   }
+
   .currentImg {
     position: absolute;
     left: calc(50% - 11px);

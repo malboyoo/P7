@@ -9,6 +9,7 @@
   background-image: url("../../../assets/images/About_background_desktop.jpg");
   background-size: cover;
   filter: brightness(70%);
+
   @include mixin.xs {
     background-image: url("../../../assets/images/About_background_mobile.jpg");
   }

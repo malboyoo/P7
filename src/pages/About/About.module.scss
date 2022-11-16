@@ -2,9 +2,11 @@
 
 .collapseContainer {
   margin: 50px 100px;
+
   @include mixin.md {
     margin: 50px 70px;
   }
+
   @include mixin.sm {
     margin: 20px 0;
   }

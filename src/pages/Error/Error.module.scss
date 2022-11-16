@@ -5,27 +5,33 @@
   span {
     font-size: 280px;
     font-weight: bold;
+
     @include mixin.sm {
       font-size: 96px;
     }
   }
+
   p {
     font-weight: 500;
     margin-top: 75px;
     font-size: 36px;
     text-align: center;
+
     @include mixin.sm {
       margin-top: 50px;
       font-size: 24px;
     }
+
     @include mixin.xs {
       margin-top: 30px;
       font-size: 18px;
     }
   }
+
   .link {
     margin-top: 150px;
     color: var(--primary);
+
     @include mixin.sm {
       margin-top: 100px;
     }

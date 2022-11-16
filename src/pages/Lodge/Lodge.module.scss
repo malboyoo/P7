@@ -5,10 +5,12 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
+
   .collapseWrapper {
     width: 100%;
     max-width: 580px;
   }
+
   @include mixin.md {
     flex-direction: column;
     justify-content: center;

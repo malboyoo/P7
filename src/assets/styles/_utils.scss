@@ -1,4 +1,5 @@
-// padding
+// Utils
+
 .p-5 {
   padding: 5px;
 }
@@ -78,6 +79,7 @@
 }
 
 // flex
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -124,6 +126,8 @@
   border: 2px solid orange;
 }
 
+// others
+
 .primary {
   filter: invert(56%) sepia(37%) saturate(1805%) hue-rotate(322deg) brightness(101%) contrast(100%);
 }
@@ -131,4 +135,3 @@
 .gray {
   filter: invert(94%) sepia(0%) saturate(25%) hue-rotate(222deg) brightness(95%) contrast(99%);
 }
-// others
