@@ -17,3 +17,19 @@
     align-items: center;
   }
 }
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 415px;
+  width: 100%;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 2px solid var(--silver-loading);
+
+  @include mixin.xs {
+    height: 255px;
+  }
+}

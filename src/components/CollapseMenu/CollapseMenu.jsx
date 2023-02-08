@@ -10,12 +10,7 @@ function CollapseMenu({ name, text, fromLodge = false }) {
       className={`${styles.collapseBox} flex-fill`}
       style={fromLodge ? { maxWidth: "580px", fontSize: "18px" } : null}
     >
-      <div
-        className={`${styles.nameContainer} flex-row align-items-center`}
-        onClick={() => {
-          setActive(!active);
-        }}
-      >
+      <div className={`${styles.nameContainer} flex-row align-items-center`} onClick={() => setActive(!active)}>
         <h2 style={fromLodge ? { fontSize: "18px" } : null}>{name}</h2>
         {active ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>}
       </div>
@@ -26,8 +21,8 @@ function CollapseMenu({ name, text, fromLodge = false }) {
       >
         <div className={styles.pContainer}>
           {Array.isArray(text) ? (
-            text.map((el) => (
-              <p style={{ fontSize: "18px" }} key={crypto.randomUUID()}>
+            text.map((el, index) => (
+              <p style={{ fontSize: "18px" }} key={index}>
                 {el}
               </p>
             ))

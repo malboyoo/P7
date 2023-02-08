@@ -1,9 +1,10 @@
 import { useParams, Navigate } from "react-router-dom";
 import CollapseMenu from "../../components/CollapseMenu/CollapseMenu";
 import data from "../../datas/logements";
-import Carousel from "./Carousel/Carousel";
 import Resume from "./Resume/Resume";
 import styles from "./Lodge.module.scss";
+import { lazy, Suspense } from "react";
+const Carousel = lazy(() => import("./Carousel/Carousel"));
 
 function Lodge() {
   const { id } = useParams();
@@ -13,7 +14,16 @@ function Lodge() {
     <Navigate to="/error" replace={true} />
   ) : (
     <main className="flex-col">
-      <Carousel pictures={lodgeData.pictures} />
+      <Suspense
+        fallback={
+          <div className={`${styles.carousel}`}>
+            <i className="fa-solid fa-spinner animate-spin-slow"></i>
+          </div>
+        }
+      >
+        <Carousel pictures={lodgeData.pictures} />
+      </Suspense>
+
       <Resume {...lodgeData} />
       <div className={`${styles.collapsesContainer}`}>
         <div className={`${styles.collapseWrapper} flex-fill`}>

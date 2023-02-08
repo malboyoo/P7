@@ -12,3 +12,27 @@
     background: white;
   }
 }
+
+.card {
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--silver-loading);
+
+  @include mixin.lg {
+    margin: 25px 15px;
+  }
+
+  @include mixin.xs {
+    width: 340px;
+    height: 255px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+}

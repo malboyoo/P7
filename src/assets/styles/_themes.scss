@@ -15,3 +15,25 @@
     margin-left: 5px;
   }
 }
+
+.active {
+  text-decoration: underline !important;
+}
+
+.fa-spinner {
+  font-size: 50px;
+  color: var(--primary);
+}
+
+.animate-spin-slow {
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  animation: spin 2s infinite;
+}

@@ -1,12 +1,21 @@
 import styles from "./Housing.module.scss";
 import data from "../../../datas/logements";
-import Card from "../Card/Card";
+import { lazy, Suspense } from "react";
+const Card = lazy(() => import("../Card/Card"));
 
 function Housing() {
   return (
     <section className={`${styles.housing} flex-row justify-content-center align-items-center p-25`}>
       {data.map((lodge) => (
-        <Card {...lodge} key={lodge.id} />
+        <Suspense
+          fallback={
+            <div className={`${styles.card} m-25`}>
+              <i className="fa-solid fa-spinner animate-spin-slow"></i>
+            </div>
+          }
+        >
+          <Card {...lodge} key={lodge.id} />
+        </Suspense>
       ))}
     </section>
   );
