@@ -5,6 +5,7 @@
   border-radius: 25px;
   background: var(--light-gray);
   flex-wrap: wrap;
+  margin-bottom: 40px;
   @include mixin.lg {
     padding: 5px;
   }
