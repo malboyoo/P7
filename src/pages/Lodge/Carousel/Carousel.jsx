@@ -1,7 +1,7 @@
 import styles from "./Carousel.module.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 
-function Carousel({ pictures }) {
+function Carousel({ pictures, altName }) {
   const [pictureIndex, setPictureIndex] = useState(0);
 
   const handleClickNext = () => {
@@ -22,7 +22,8 @@ function Carousel({ pictures }) {
 
   return (
     <div className={styles.carousel}>
-      <img src={pictures[pictureIndex]} alt="" />
+      <img src={pictures[pictureIndex]} alt={`${altName} ${pictureIndex + 1}`} />
+
       {pictures.length !== 1 && (
         <button className={`${styles.btnNext} ${styles.btn}`} onClick={handleClickNext}>
           <i className="fa-solid fa-chevron-right"></i>

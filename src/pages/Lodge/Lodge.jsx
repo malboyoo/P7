@@ -21,7 +21,7 @@ function Lodge() {
           </div>
         }
       >
-        <Carousel pictures={lodgeData.pictures} />
+        <Carousel pictures={lodgeData.pictures} altName={lodgeData.title} />
       </Suspense>
 
       <Resume {...lodgeData} />
